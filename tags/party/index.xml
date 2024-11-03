@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>避风港</title>
-    <link>https://sinohavn.github.io/</link>
-    <description>Recent content on 避风港</description>
+    <title>Party on 避风港</title>
+    <link>https://sinohavn.github.io/tags/party/</link>
+    <description>Recent content in Party on 避风港</description>
     <image>
       <title>避风港</title>
       <url>https://sinohavn.github.io/images/papermod-cover.png</url>
@@ -13,7 +13,7 @@
     <language>zh</language>
     <copyright>PaperMod Contributors</copyright>
     <lastBuildDate>Mon, 04 Nov 2024 00:16:44 +0100</lastBuildDate>
-    <atom:link href="https://sinohavn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sinohavn.github.io/tags/party/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Harness Workshop</title>
       <link>https://sinohavn.github.io/posts/harness_workshop/</link>
