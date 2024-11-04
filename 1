@@ -1,8 +1,4 @@
-# @Author: Jie Chi
-# @Date:   2024-11-05 00:19:58
-# @Last Modified by:   Jie Chi
-# @Last Modified time: 2024-11-05 00:39:25
-name: Deploy Hugo Website to Pages
+name: Deploy Hugo to Pages
 
 on:
   push:
@@ -19,7 +15,7 @@ on:
       hugoVersion:
         description: "Hugo Version"
         required: false
-        default: "0.136.5"
+        default: "0.112.4"
 
 # Allow one concurrent deployment
 concurrency:
@@ -42,7 +38,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.136.5' }}
+      HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.112.4' }}
     steps:
       - name: Install Hugo CLI
         run: |
@@ -72,6 +68,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
