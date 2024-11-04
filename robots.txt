@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://sinohavn.github.io/sitemap.xml
