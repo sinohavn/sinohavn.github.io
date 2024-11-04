@@ -1,3 +1,7 @@
+# @Author: Jie Chi
+# @Date:   2024-11-05 00:19:58
+# @Last Modified by:   Jie Chi
+# @Last Modified time: 2024-11-05 00:25:00
 name: Deploy Hugo Website to Pages
 
 on:
@@ -47,7 +51,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: exampleSite
+          ref: source
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
