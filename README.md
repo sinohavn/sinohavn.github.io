@@ -17,7 +17,7 @@ To make changes and view the website locally, you can follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/sinohavn.github.io.git
+   git clone https://github.com/sinohavn/sinohavn.github.io.git
    ```
 
 2. **Switch to the source branch**:
