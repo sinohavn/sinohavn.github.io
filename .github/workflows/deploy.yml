@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-05 00:19:58
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2024-11-05 00:58:48
+# @Last Modified time: 2024-11-05 01:02:21
 name: Deploy Hugo Website to Pages
 
 on:
@@ -67,6 +67,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          name: hugo-site
           path: ./public
   # Deployment job
   deploy:
@@ -75,6 +76,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3  # Updated to latest version
+        with:
+          name: hugo-site
+          path: ./public
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
