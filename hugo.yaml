@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-03 20:00:49
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2024-11-06 13:40:35
+# @Last Modified time: 2024-11-06 19:03:20
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://sinohavn.github.io/"
@@ -34,7 +34,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  description: "SinoHavn - 一个在丹麦建立的泛中文酷儿社群，致力于为在海外的华人酷儿群体提供支持和连接的桥梁。"
   author: SinoHavn
   # author: ["Me", "You"] # multiple authors
 
@@ -52,12 +52,12 @@ params:
   ShowPageNums: true
   ShowToc: true
   # comments: false
-  images: ["images/papermod-cover.png"]
+  images: ["/images/favicon.ico"]
 
   profileMode:
     enabled: false
-    title: PaperMod
-    imageUrl: "#"
+    title: SinoHavn
+    imageUrl: "/images/favicon.ico"
     imageTitle: my image
     # imageWidth: 120
     # imageHeight: 120
@@ -68,8 +68,21 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "欢迎来到避风港!"
-    Content: 这里是一个泛中文酷儿群体在丹麦的小小港湾 🌙
+    title: "欢迎来到避风港!"
+    content: >
+          这里是一个专为在丹麦的泛中文酷儿群体创建的温暖港湾 🌙  
+            &nbsp;  
+          我们分享：
+            - 🎉 <a href="https://sinohavn.github.io/tags/workshop/" style="color: #007bff;"><strong>小型聚会、手工坊、读书会等活动</strong></a> —— 不定期由我们组织
+            - 🎊 <a href="https://sinohavn.github.io/tags/resource/" style="color: #007bff;"><strong>当地节庆活动和生活指南</strong></a> —— 助您更好地融入生活
+            - 🌈 <a href="https://sinohavn.github.io/tags/discussion/" style="color: #007bff;"><strong>关于酷儿群体的深度文章</strong></a> —— 提供多样化的视角
+
+            &nbsp;  
+          🌱 **注**：由于性别议题不断发展，内容可能有局限，欢迎友好交流！本网站中的言论仅代表作者观点。
+
+    image:
+      url: "/images/favicon.svg"
+    
     
   socialIcons:
     - name: xiaohongshu
@@ -80,14 +93,13 @@ params:
       url: "mailto:sinohavn5@gmail.com" 
 
   editPost:
-    URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+    URL: "https://github.com/sinohavn/sinohavn.github.io/tree/source/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
   # label:
-  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
-  # text: "Home"
-  # icon: icon.png
+  # text: "主页"
+  # icon: /images/favicon.svg
   # iconHeight: 35
 
   # analytics:
@@ -95,12 +107,11 @@ params:
   #         SiteVerificationTag: "XYZabc"
 
   assets:
-    disableHLJS: true
-  #     favicon: "<link / abs url>"
-  #     favicon16x16: "<link / abs url>"
-  #     favicon32x32: "<link / abs url>"
-  #     apple_touch_icon: "<link / abs url>"
-  #     safari_pinned_tab: "<link / abs url>"
+    favicon: "/images/favicon.ico"
+    favicon16x16: "/images/favicon-16x16.png"
+    favicon32x32: "/images/favicon-32x32.png"
+    apple_touch_icon: "/images/apple-touch-icon.png"
+    safari_pinned_tab: "/images/favicon.svg"
 
   # cover:
   #     hidden: true # hide everywhere but not in structured data

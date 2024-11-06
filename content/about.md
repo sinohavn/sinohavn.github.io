@@ -1,6 +1,6 @@
 ---
 title: "关于我们"
-description: "Explore upcoming festivals and large community events."
+description: "在丹麦的泛中文酷儿社群，为华人提供支持、连接与温暖的空间。"
 layout: "default"  # or "single" depending on your theme settings
 ---
 
@@ -12,7 +12,7 @@ layout: "default"  # or "single" depending on your theme settings
 
 ## 我们的活动
 
-- **社交活动**：我们会定期组织小型聚会、手工坊、读书会等活动，为朋友们提供轻松交流的平台。
+- **社交活动**：我们会不定期组织小型聚会、手工坊、读书会等活动，为朋友们提供轻松交流的平台。
 - **资源共享**：网站上会提供一系列实用的生活信息，例如节庆活动、婚姻注册指南、学生生活指南等，为大家提供在丹麦生活的便利。
 - **专题讨论**：我们也会不定期发布关于性别平等、性少数群体权益等的深度文章，鼓励大家一起交流、学习。
 
