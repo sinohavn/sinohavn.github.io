@@ -1,46 +1,29 @@
 ---
-title: "Festivals and Major Events"
+title: "关于我们"
 description: "Explore upcoming festivals and large community events."
 layout: "default"  # or "single" depending on your theme settings
 ---
 
-# Festivals and Major Events
+欢迎来到 **避风港**！我们是一个在丹麦建立的泛中文酷儿社群，致力于为在海外的华人酷儿群体提供支持和连接的桥梁。无论您是刚刚来到丹麦的学生，正在这里工作，还是仅仅路过，我们都希望在这里为您提供一个温暖、安全的空间。
 
-Welcome to our festivals and major events page! Here, you’ll find information on larger gatherings and celebrations that bring our community together.
+## 我们的宗旨
 
----
+在一个远离家乡的陌生环境中，找到自己的社群、获取信任的信息、以及结识有共同兴趣的朋友是我们成立的初衷。**避风港**的目标是帮助大家克服文化与地域的隔阂，创建一个包容、理解和相互支持的社群。
 
-### Upcoming Festivals
+## 我们的活动
 
-#### 🌈 Queer Pride Festival
-**Date:** June 15–18, 2024  
-**Location:** Copenhagen, Denmark
+- **社交活动**：我们会定期组织小型聚会、手工坊、读书会等活动，为朋友们提供轻松交流的平台。
+- **资源共享**：网站上会提供一系列实用的生活信息，例如节庆活动、婚姻注册指南、学生生活指南等，为大家提供在丹麦生活的便利。
+- **专题讨论**：我们也会不定期发布关于性别平等、性少数群体权益等的深度文章，鼓励大家一起交流、学习。
 
-Join us in celebrating love, identity, and community at this year’s Queer Pride Festival! Expect parades, music, workshops, and much more. This is one of the most anticipated events in our community, and we look forward to seeing everyone come together.
+## 加入我们
 
----
+我们欢迎任何想要加入或了解我们的朋友，无论您的性别、性向或背景如何，这里都对您敞开大门。您可以在此页面浏览我们的活动动态，也可以通过以下社交平台关注我们。
 
-#### 🎉 Mid-Autumn Cultural Celebration
-**Date:** September 21, 2024  
-**Location:** Community Center, Copenhagen
-
-Celebrate the Mid-Autumn Festival with us, a time to connect with traditions, enjoy mooncakes, and engage in cultural activities. There will be live performances, art displays, and an open area for storytelling.
+- **Instagram**: [@havn_sinoqueer](https://instagram.com/havn_sinoqueer)
+- **小红书**: [@避风港Havn](https://www.xiaohongshu.com/user/profile/654d4c740000000002036b1c?xhsshare=CopyLink&appuid=5c8132d200000000120396f1&apptime=1730674113&share_id=08e23301b7e146579713628ce968d600)
+- **邮件**：[sinohavn5@gmail.com](mailto:sinohavn5@gmail.com)
 
 ---
 
-### Past Festivals
-
-#### 🥳 Spring Equinox Celebration
-**Date:** March 20, 2024
-
-Our Spring Equinox Celebration brought together the community to welcome the new season with music, dancing, and a flower exchange. This festival marked a fresh start and a celebration of growth and renewal.
-
----
-
-### Interested in Hosting or Volunteering?
-
-We’re always looking for more hands to help make these events successful! If you’d like to contribute, reach out to us [here](mailto:info@example.com).
-
----
-
-We hope to see you at our upcoming festivals! Keep an eye on this page for updates on new events.
+如果您有任何问题或建议，欢迎联系我们，我们期待与您见面！
