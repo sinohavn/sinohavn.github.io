@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-03 20:00:49
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2024-11-05 00:14:41
+# @Last Modified time: 2024-11-06 00:39:53
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://sinohavn.github.io/"
@@ -120,8 +120,8 @@ menu:
     - name: Archive
       url: archives
       weight: 5
-    - name: "Festivals"
-      url: "festival/"
+    - name: "About us"
+      url: "about"
       weight: 10
     - name: Search
       url: search/
