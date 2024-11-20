@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-03 20:00:49
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2024-11-06 19:25:44
+# @Last Modified time: 2024-11-20 00:22:50
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://sinohavn.github.io/"
@@ -14,7 +14,7 @@ theme: [PaperMod]
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
-buildFuture: false
+buildFuture: true
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
@@ -134,12 +134,15 @@ menu:
     - name: "About us"
       url: "about"
       weight: 10
+    - name: "Local events"
+      url: "local-events-guide"
+      weight: 15
     - name: Search
       url: search/
-      weight: 10
+      weight: 20
     - name: Tags
       url: tags/
-      weight: 10
+      weight: 25
 markup:
   goldmark:
     renderer:
