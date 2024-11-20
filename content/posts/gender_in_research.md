@@ -4,6 +4,8 @@ draft: false
 author: "SinoQueer Sweden"
 title: "从性别视角做论文 📑 (2024.11.23)"
 date: "2024-11-20"
+description: "性别议题的学术论文分享与讨论"
+keywords: ["Gender Studies", "SinoQueer Sweden", "Queer in Research"]
 ---
 
 # 毕业论文分享！
