@@ -3,7 +3,7 @@ date: '2024-11-04T00:16:44+01:00'
 tags: ["workshop", "party"]
 draft: false
 title: 'Harness Workshop (2024.11.09)'
-description: "DHarness或者其他身体装饰品制作"
+description: "Harness或者其他身体装饰品制作"
 keywords: ["Harness Workshop", "Lund", "Denmark"]
 author: "41"
 ---
