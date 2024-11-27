@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "版画工作坊 （2024.12.07）"
+title: "版画工作坊 (2024.12.07)"
 date: 2024-11-27
 tags: ["workshop", "art", "printmaking"]
 keywords: ["workshop", "art", "printmaking",  "Lund", "Denmark", "版画"]
