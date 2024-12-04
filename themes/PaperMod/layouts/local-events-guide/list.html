@@ -23,26 +23,15 @@
 
   <div class="post-content">
     <div class="events-by-month">
-      {{ $currentMonth := now.Format "January 2006" }}
-      
-      {{ range .Pages.ByDate.Reverse }}
-        {{ if eq .Params.month $currentMonth }}
-          <!-- Show events for the current month -->
-          <div class="current-month-events">
-            <h2>{{ .Params.month }} (Current Month)</h2>
-            <ul>
-              {{ .Content | markdownify }}
-            </ul>
-          </div>
-        {{ else }}
-          <!-- Show links to other months -->
-          <div class="month-link">
+      <ul>
+        {{ range .Pages.ByDate.Reverse }}
+          <li data-month="{{ .Params.month }}">
             <h2>
               <a href="{{ .Permalink }}">{{ .Params.month }} Events</a>
             </h2>
-          </div>
+          </li>
         {{ end }}
-      {{ end }}
+      </ul>
     </div>
   </div>
 
@@ -56,4 +45,19 @@
   </footer>
 </article>
 
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
+      document.querySelectorAll('[data-month]').forEach(item => {
+        if (item.getAttribute('data-month') === currentMonth) {
+          const link = item.querySelector('a');
+          link.innerHTML = `${currentMonth} (Current Month)`;
+          link.classList.add('current-month');
+        }
+      });
+    });
+  </script>
+  
 {{- end }}
