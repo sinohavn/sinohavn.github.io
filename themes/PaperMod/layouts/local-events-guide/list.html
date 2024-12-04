@@ -29,6 +29,9 @@
             <h2>
               <a href="{{ .Permalink }}">{{ .Params.month }} Events</a>
             </h2>
+            <div class="month-events" style="display: none;">
+              <ul>{{ .Content | markdownify }}</ul>
+            </div>
           </li>
         {{ end }}
       </ul>
@@ -48,16 +51,28 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
-      document.querySelectorAll('[data-month]').forEach(item => {
-        if (item.getAttribute('data-month') === currentMonth) {
-          const link = item.querySelector('a');
-          link.innerHTML = `${currentMonth} (Current Month)`;
-          link.classList.add('current-month');
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get the current month and year as "January 2024"
+    const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
+
+    // Loop through all the months in the list
+    document.querySelectorAll('[data-month]').forEach(item => {
+      const month = item.getAttribute('data-month');
+
+      if (month === currentMonth) {
+        // Show the events for the current month
+        const monthContent = item.querySelector('.month-events');
+        if (monthContent) {
+          monthContent.style.display = 'block';
         }
-      });
+        // Update the link text to include "(Current Month)"
+        const link = item.querySelector('a');
+        if (link) {
+          link.innerHTML = `${month} Events (Current Month)`;
+        }
+      }
     });
-  </script>
+  });
+</script>
   
 {{- end }}
