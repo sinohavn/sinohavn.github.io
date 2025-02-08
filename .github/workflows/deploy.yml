@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-05 00:19:58
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2025-02-08 22:03:42
+# @Last Modified time: 2025-02-08 22:05:04
 name: Deploy Hugo Website to Pages
 
 on:
@@ -67,8 +67,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3  # Use the latest version
         with:
           path: ./public
-      - name: Debug Available Artifacts
-        run: ls -lah /home/runner/work/_temp/_github_home/
+      - name: Debug Working Directory
+        run: pwd && ls -lah
+
+      - name: Debug Artifacts Directory
+        run: ls -lah /home/runner/work/sinohavn.github.io/
 
   # Deployment job
   deploy:
