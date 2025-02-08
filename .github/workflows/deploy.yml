@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-05 00:19:58
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2025-02-08 22:07:43
+# @Last Modified time: 2025-02-08 22:09:08
 name: Deploy Hugo Website to Pages
 
 on:
@@ -73,6 +73,8 @@ jobs:
 
       - name: Debug Artifacts Directory
         run: ls -lah /home/runner/work/sinohavn.github.io/
+      - name: Debug Deployment Directory
+        run: ls -lah ./public || echo "No public directory found!"
 
   # Deployment job
   deploy:
