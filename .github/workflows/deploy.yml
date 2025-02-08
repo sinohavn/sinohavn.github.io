@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-05 00:19:58
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2025-02-08 22:13:36
+# @Last Modified time: 2025-02-08 22:15:43
 name: Deploy Hugo Website to Pages
 
 on:
@@ -54,7 +54,7 @@ jobs:
           ref: source
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
       - name: Get Theme
         run: git submodule update --init --recursive
       - name: Update theme to Latest commit
@@ -62,19 +62,11 @@ jobs:
       - name: Build with Hugo
         run: |
           hugo --buildDrafts --gc --baseURL ${{ steps.pages.outputs.base_url }}
-          ls -lah ./public  # Debugging: Ensure Hugo actually creates files
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3  # Use the latest version
         with:
           name: github-pages  # Ensure this matches expected deployment name
           path: ./public
-      - name: Debug Working Directory
-        run: pwd && ls -lah
-
-      - name: Debug Artifacts Directory
-        run: ls -lah /home/runner/work/sinohavn.github.io/
-      - name: Debug Deployment Directory
-        run: ls -lah ./public || echo "No public directory found!"
 
   # Deployment job
   deploy:
