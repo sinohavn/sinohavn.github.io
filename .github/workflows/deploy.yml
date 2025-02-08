@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-05 00:19:58
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2025-02-08 21:55:19
+# @Last Modified time: 2025-02-08 21:56:38
 name: Deploy Hugo Website to Pages
 
 on:
@@ -64,7 +64,7 @@ jobs:
           hugo --buildDrafts --gc --baseURL ${{ steps.pages.outputs.base_url }}
           ls -lah ./public  # Debugging: Ensure Hugo actually creates files
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # Use the latest version
+        uses: actions/upload-pages-artifact@v2.0.0  # Use the latest version
         with:
           path: ./public
 
