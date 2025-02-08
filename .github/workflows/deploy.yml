@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-05 00:19:58
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2024-11-05 01:16:20
+# @Last Modified time: 2025-02-08 21:05:59
 name: Deploy Hugo Website to Pages
 
 on:
@@ -49,7 +49,7 @@ jobs:
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: source
       - name: Setup Pages
@@ -65,7 +65,7 @@ jobs:
             --buildDrafts --gc \
             --baseURL ${{ steps.pages.outputs.base_url }}
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2  # Use the latest version
+        uses: actions/upload-pages-artifact@v3  # Use the latest version
         with:
           path: ./public
   # Deployment job
