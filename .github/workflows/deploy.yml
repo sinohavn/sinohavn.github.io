@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-05 00:19:58
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2025-02-08 21:05:59
+# @Last Modified time: 2025-02-08 21:18:57
 name: Deploy Hugo Website to Pages
 
 on:
@@ -35,6 +35,7 @@ defaults:
 permissions:
   contents: read
   pages: write
+  workflow: write
   id-token: write
 
 jobs:
@@ -77,6 +78,7 @@ jobs:
     permissions:
       pages: write    
       id-token: write  
+      workflow: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
