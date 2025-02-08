@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-05 00:19:58
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2025-02-08 22:15:43
+# @Last Modified time: 2025-02-08 22:16:41
 name: Deploy Hugo Website to Pages
 
 on:
@@ -63,9 +63,9 @@ jobs:
         run: |
           hugo --buildDrafts --gc --baseURL ${{ steps.pages.outputs.base_url }}
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # Use the latest version
+        uses: actions/upload-pages-artifact@v3  
         with:
-          name: github-pages  # Ensure this matches expected deployment name
+          name: github-pages  
           path: ./public
 
   # Deployment job
