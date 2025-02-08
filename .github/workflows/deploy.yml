@@ -1,7 +1,7 @@
 # @Author: Jie Chi
 # @Date:   2024-11-05 00:19:58
 # @Last Modified by:   Jie Chi
-# @Last Modified time: 2025-02-08 21:34:24
+# @Last Modified time: 2025-02-08 21:38:38
 name: Deploy Hugo Website to Pages
 
 on:
@@ -77,6 +77,14 @@ jobs:
       pages: write    
       id-token: write  
     steps:
+       
+      - name: Download Artifact  # Ensure the artifact is accessible
+        uses: actions/download-artifact@v3
+        with:
+          name: github-pages  # Ensure this matches the artifact name
+          path: ./public  # Ensure deploy step finds the right files
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+ 
