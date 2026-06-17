@@ -1,0 +1,123 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+      {{- if .Draft }}
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+      {{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+  </header>
+
+  <div class="post-content">
+    {{- if .Content }}
+    <div class="events-intro">
+      {{ .Content }}
+    </div>
+    {{- end }}
+
+    {{ $recentCutoff := now.AddDate 0 -1 0 }}
+    {{ $upcoming := where .Pages.ByDate.Reverse "Date" "ge" $recentCutoff }}
+    {{ $past := where .Pages.ByDate.Reverse "Date" "lt" $recentCutoff }}
+
+    <h2>近期活动</h2>
+    {{ if $upcoming }}
+    <div class="events-by-month">
+      <ul>
+        {{ range $upcoming }}
+          <li data-month="{{ .Params.month }}">
+            <h2>
+              <button class="month-toggle" type="button" aria-expanded="false">
+                <span>{{ .Params.month }}</span>
+                <span class="month-toggle-icon" aria-hidden="true">+</span>
+              </button>
+            </h2>
+            <div class="month-events" hidden>
+              <ul>{{ .Content | markdownify }}</ul>
+            </div>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ else }}
+    <p>近期公开活动仍在更新中。你可以关注 <a href="https://www.instagram.com/havn_sinoqueer">Instagram</a> / <a href="https://www.xiaohongshu.com/user/profile/654d4c740000000002036b1c">小红书</a> 获取最新消息，也欢迎通过 <a href="mailto:sinohavn5@gmail.com">邮件</a> 一起发起活动。</p>
+    {{ end }}
+
+    <h2>往期活动</h2>
+    <p>下面保留过往活动记录，方便了解我们曾经做过什么，也给之后想合作或发起活动的朋友一些参考。</p>
+
+    <div class="events-by-month">
+      <ul>
+        {{ range $past }}
+          <li data-month="{{ .Params.month }}">
+            <h2>
+              <button class="month-toggle" type="button" aria-expanded="false">
+                <span>{{ .Params.month }}</span>
+                <span class="month-toggle-icon" aria-hidden="true">+</span>
+              </button>
+            </h2>
+            <div class="month-events" hidden>
+              <ul>{{ .Content | markdownify }}</ul>
+            </div>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+
+  <footer class="post-footer">
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+  </footer>
+</article>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggles = document.querySelectorAll('.month-toggle');
+    const currentMonth = new Date().toLocaleString('en', { month: 'long', year: 'numeric' });
+    let openedCurrentMonth = false;
+
+    toggles.forEach((toggle, index) => {
+      const item = toggle.closest('[data-month]');
+      const content = item.querySelector('.month-events');
+      const icon = toggle.querySelector('.month-toggle-icon');
+
+      const setExpanded = (expanded) => {
+        toggle.setAttribute('aria-expanded', expanded);
+        content.hidden = !expanded;
+        icon.textContent = expanded ? '-' : '+';
+      };
+
+      if (item.getAttribute('data-month') === currentMonth) {
+        setExpanded(true);
+        openedCurrentMonth = true;
+      }
+
+      if (!openedCurrentMonth && index === 0) {
+        setExpanded(true);
+      }
+
+      toggle.addEventListener('click', () => {
+        setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+    });
+  });
+</script>
+
+{{- end }}

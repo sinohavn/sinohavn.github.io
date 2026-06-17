@@ -1,0 +1,94 @@
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.home-action {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--primary);
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.65rem 0.9rem;
+  text-decoration: none;
+}
+
+.home-action:hover {
+  border-color: var(--primary);
+}
+
+.home-action.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--theme);
+}
+
+.home-notice {
+  background: var(--code-bg);
+  border-left: 4px solid var(--primary);
+  border-radius: 6px;
+  margin: 1rem 0 1.25rem;
+  padding: 0.85rem 1rem;
+}
+
+@media (max-width: 520px) {
+  .home-actions {
+    display: grid;
+  }
+
+  .home-action {
+    text-align: center;
+  }
+}
+
+.events-intro {
+  margin-bottom: 1.5rem;
+}
+
+.events-by-month > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.events-by-month li {
+  border-top: 1px solid var(--border);
+  padding: 0.35rem 0;
+}
+
+.month-toggle {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  text-align: left;
+  width: 100%;
+}
+
+.month-toggle-icon {
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.month-events {
+  padding: 0.25rem 0 0.75rem;
+}
+
+.inline-social-link {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.inline-social-icon {
+  flex: 0 0 auto;
+  height: 1.15em;
+  width: 1.15em;
+}

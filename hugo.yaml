@@ -8,8 +8,10 @@ baseURL: "https://sinohavn.github.io/"
 title: 避风港
 languageCode: zh
 copyright: "© 2024 [sinohavn](mailto:sinohavn5@gmail.com)"
-paginate: 5
 theme: [PaperMod]
+
+pagination:
+  pagerSize: 5
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -69,15 +71,24 @@ params:
 
   homeInfoParams:
     title: "欢迎来到避风港!"
-    content: >
-          这里是一个专为在丹麦的泛中文酷儿群体创建的温暖港湾 🌙  
-            &nbsp;  
-          我们分享：
-            - 🎉 <a href="https://sinohavn.github.io/tags/workshop/" style="color: #007bff;"><strong>小型聚会、手工坊、读书会等活动</strong></a> —— 不定期由我们组织
-            - 🎊 <a href="https://sinohavn.github.io/tags/resource/" style="color: #007bff;"><strong>当地节庆活动和生活指南</strong></a> —— 助您更好地融入生活
-            - 🌈 <a href="https://sinohavn.github.io/tags/discussion/" style="color: #007bff;"><strong>关于酷儿群体的深度文章</strong></a> —— 提供多样化的视角
+    content: |
+          这里是一个专为在丹麦的泛中文酷儿群体创建的温暖港湾 🌙
+          如果你正在丹麦生活、学习、工作，或只是短暂停留，都欢迎从这里认识我们。
 
-            &nbsp;  
+          <div class="home-actions">
+            <a class="home-action primary" href="/local-events-guide/">查看近期活动</a>
+            <a class="home-action" href="/about/">加入或联系我们</a>
+            <a class="home-action" href="/tags/resource/">阅读生活资源</a>
+          </div>
+
+          <p class="home-notice"><strong>近期活动更新中。</strong>如果页面上暂时没有新的活动，请通过 Instagram、小红书或邮件关注最新消息，也欢迎来信一起发起活动。</p>
+
+          我们分享：
+
+          - 🎉 [**小型聚会、手工坊、读书会等活动**](/tags/workshop/) —— 不定期由我们组织
+          - 🎊 [**当地节庆活动和生活指南**](/tags/resource/) —— 助你更好地融入生活
+          - 🌈 [**关于酷儿群体的深度文章**](/tags/discussion/) —— 提供多样化的视角
+
           🌱 **注**：由于性别议题不断发展，内容可能有局限，欢迎友好交流！本网站中的言论仅代表作者观点。
 
     image:
